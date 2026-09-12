@@ -65,3 +65,18 @@ String formatDate(int day, int month, int year) {
   return '$dayText.$monthText.$year';
 }
 
+
+// TASK 3
+int countVowels(String text) {
+  const vowels = 'aeiou';
+  int count = 0;
+
+  for (int i = 0; i < text.length; i++) {
+    if (vowels.contains(text[i].toLowerCase())) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
