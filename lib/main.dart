@@ -1,8 +1,38 @@
 void main() {
   // TASK 1
   multiplicationTable();
+
+  // TASK 2
+  print('\nTASK 2: Next day');
+  print(nextDay(5, 9, 2026));   // 06.09.2026
+  print(nextDay(28, 2, 2024));  // 29.02.2024
+  print(nextDay(28, 2, 2026));  // 01.03.2026
+  print(nextDay(29, 2, 2026));  // invalid date
+  print(nextDay(28, 2, 2100));  // 01.03.2100
+  print(nextDay(31, 12, 2025)); // 01.01.2026
+
+  // TASK 3
+  print('\nTASK 3: Vowel Counter');
+  const text = 'flutter mobile development';
+  print('Vowels in "$text": ${countVowels(text)}');
+
+  // TASK 4
+  print('\nTASK 4: Manual min & max finder');
+  final numbers = [14, 88, 3, 42, 99, 12, 67];
+  final result = findMinMax(numbers);
+  print('max: ${result['max']}, min: ${result['min']}');
+
+  final numbers1 = [234, 34, 123, 44, 949, 112, 67];
+  final result1 = findMinMax(numbers1);
+  print('max: ${result1['max']}, min: ${result1['min']}');
+
+  // TASK 5
+  print('\nTASK 5: Prime Number Checker');
+  print('3 -> ${isPrime(3) ? 'prime number' : 'not prime number'}');
+  print('6 -> ${isPrime(6) ? 'prime number' : 'not prime number'}');
 }
 
+// TASK 1
 void multiplicationTable() {
   print('TASK 1: Multiplication table 1-10');
 
@@ -13,6 +43,7 @@ void multiplicationTable() {
     print('');
   }
 }
+
 // TASK 2
 String nextDay(int day, int month, int year) {
   if (!isValidDate(day, month, year)) {
@@ -65,7 +96,6 @@ String formatDate(int day, int month, int year) {
   return '$dayText.$monthText.$year';
 }
 
-
 // TASK 3
 int countVowels(String text) {
   const vowels = 'aeiou';
@@ -101,6 +131,7 @@ Map<String, int> findMinMax(List<int> numbers) {
 
   return {'min': min, 'max': max};
 }
+
 // TASK 5
 bool isPrime(int number) {
   if (number < 2) {
@@ -115,4 +146,3 @@ bool isPrime(int number) {
 
   return true;
 }
-
